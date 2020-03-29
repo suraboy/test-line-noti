@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  line-noti-laravel:
+    build:
+      context: '.'
+      dockerfile: 'docker/Dockerfile'
+      args:
+        uid: ${UID}
+    container_name: line-noti-laravel
+    environment:
+      - APACHE_RUN_USER=#${UID}
+      - APACHE_RUN_GROUP=#${UID}
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 8001:80
