@@ -60,8 +60,4 @@ Open the browser
 ```bash
 http://localhost:8001
 ```
-```bash
-username : admin 
-password : admin
-```
 
